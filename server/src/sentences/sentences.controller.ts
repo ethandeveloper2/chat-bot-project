@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { SentenceService } from './sentence.service';
+import { SentenceService } from './sentences.service';
 import { CreateSentenceDto } from './dto/create-sentence.dto';
 import { UpdateSentenceDto } from './dto/update-sentence.dto';
 

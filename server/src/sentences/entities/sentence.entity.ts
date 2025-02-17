@@ -1,8 +1,8 @@
-import { Question } from 'src/question/entities/question.entity';
-import { Topic } from 'src/topic/entities/topic.entity';
+import { Question } from 'src/questions/entities/question.entity';
+import { Topic } from 'src/topics/entities/topic.entity';
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from 'typeorm';
 
-@Entity()
+@Entity('sentences')
 export class Sentence {
   @PrimaryGeneratedColumn()
   id: number;

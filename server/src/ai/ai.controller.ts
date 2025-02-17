@@ -6,8 +6,8 @@ import { AiService } from './ai.service';
 export class AiController {
   constructor(private readonly aiService: AiService) {}
 
-  @Get('weather')
-  async getWeather(@Query('location') location: string): Promise<string> {
-    return this.aiService.getWeatherForLocation(location);
-  }
+  // @Get('weather')
+  // async getWeather(@Query('location') location: string): Promise<string> {
+  //   return this.aiService.getWeatherForLocation(location);
+  // }
 }

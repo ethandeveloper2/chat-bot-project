@@ -21,6 +21,19 @@ export class TopicService {
     return await this.topicRepository.find();
   }
 
+  async initializeTopics() {
+    const topics = ['일상 표현', '가족', '음식', '학교 생활', '감정 표현'];
+
+    for (const topicName of topics) {
+      const exist = await this.topicRepository.findOne({where: {name: topicName}});
+      if (!exist) {
+        const topic = this.topicRepository.create({name: topicName});
+        await this.topicRepository.save(topic);
+      }
+    }
+    console.log("학습 주제 데이터 삽입 완료!")
+  }
+
   findOne(id: number) {
     return `This action returns a #${id} topic`;
   }

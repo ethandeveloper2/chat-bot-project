@@ -1,7 +1,7 @@
-import { Sentence } from 'src/sentence/entities/sentence.entity';
+import { Sentence } from 'src/sentences/entities/sentence.entity';
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 
-@Entity()
+@Entity('topics')
 export class Topic {
   @PrimaryGeneratedColumn()
   id: number;

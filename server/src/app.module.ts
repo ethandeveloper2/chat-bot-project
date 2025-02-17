@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AiModule } from './ai/ai.module';
-import { TopicModule } from './topic/topic.module';
-import { SentenceModule } from './sentence/sentence.module';
-import { QuestionModule } from './question/question.module';
+import { TopicModule } from './topics/topics.module';
+import { SentenceModule } from './sentences/sentences.module';
+import { QuestionModule } from './questions/questions.module';
+import { AdminModule } from './admin/admin.module';
 
 @Module({
   imports: [
@@ -26,7 +27,8 @@ import { QuestionModule } from './question/question.module';
     AiModule,
     TopicModule,
     SentenceModule,
-    QuestionModule
+    QuestionModule,
+    AdminModule,
   ],
   controllers: [AppController],
   providers: [AppService],
